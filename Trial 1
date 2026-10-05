@@ -1,0 +1,17 @@
+# vba-git-sync
+
+`vba-git-sync` is a lightweight Python CLI utility designed to unpack, normalize, and synchronize VBA code modules from Microsoft Office files (`.xlsm`, `.xlam`, `.xlsb`) into clean plain-text source files for version control using Git.
+
+## Features
+
+- **Automated Extraction:** Extracts `.cls`, `.bas`, and `.frm` modules directly from Office open XML and binary containers.
+- **Git Diff Normalization:** Strips binary attribute headers and normalizes line endings (`LF`) to maintain clean, human-readable Git diffs.
+- **Two-Way Syncing:** Rebuilds modified VBA code back into target Office workbooks for seamless development workflows.
+- **CI/CD Integration:** Integrates into pre-commit hooks and GitHub Actions pipelines for automated testing.
+
+## Installation
+
+```bash
+git clone [https://github.com/mear117jr/vba-git-sync.git](https://github.com/mear117jr/vba-git-sync.git)
+cd vba-git-sync
+pip install -r requirements.txt
